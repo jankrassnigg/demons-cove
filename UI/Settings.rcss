@@ -1,0 +1,98 @@
+/* Overrides for the stock settings document (rmlui-menu/ez-app-settings.rcss), in the style of the game's menu.
+   The input widgets (drop downs, check boxes, sliders) keep their default look. */
+
+body.app-settings {
+  font-family: LatoLatin;
+  background-color: rgba(20, 0, 0, 200);
+}
+
+.app-settings .modal-window,
+.app-settings .rebind-window {
+  decorator: none;
+  background-color: rgba(10, 2, 2, 235);
+  border: 2dp #802018;
+  color: #e8d0c8;
+}
+
+.app-settings .title-bar {
+  padding: 12dp 16dp 8dp 16dp;
+  font-size: 26dp;
+  font-weight: bold;
+  color: #e02818;
+  font-effect: glow(3dp #600000);
+}
+
+.app-settings tabs {
+  padding: 0 12dp;
+  gap: 4dp;
+}
+
+.app-settings tab {
+  decorator: none;
+  background-color: rgba(60, 8, 6, 230);
+  border: 1dp #802018;
+  color: #c0a0a0;
+  line-height: 34dp;
+}
+
+.app-settings tab:hover,
+.app-settings tab:focus-visible {
+  background-color: rgba(110, 16, 10, 240);
+  color: #ffffff;
+}
+
+.app-settings tab:selected {
+  background-color: rgba(160, 24, 14, 255);
+  color: #ffffff;
+}
+
+.app-settings panels {
+  margin: 0 12dp;
+  border-top: 2dp #802018;
+}
+
+.app-settings tbody {
+  decorator: none;
+  background-color: transparent;
+}
+
+.app-settings thead tr {
+  decorator: none;
+  color: #a08080;
+}
+
+.app-settings tbody tr {
+  color: #e8d0c8;
+}
+
+.app-settings tr:nth-child(odd) {
+  background: rgba(60, 10, 8, 120);
+}
+
+.app-settings tr:nth-child(even) {
+  background: rgba(30, 4, 4, 120);
+}
+
+.app-settings button,
+.app-settings td button {
+  decorator: none;
+  padding-top: 0;
+  line-height: 33dp;
+  color: #e8d0c8;
+  background-color: rgba(60, 8, 6, 230);
+  border: 1dp #802018;
+}
+
+.app-settings button:hover,
+.app-settings button:focus-visible {
+  background-color: rgba(140, 20, 12, 240);
+  color: #ffffff;
+}
+
+.app-settings button:active {
+  background-color: rgba(200, 30, 20, 255);
+}
+
+.app-settings .back-row button {
+  margin: 0 6dp;
+}

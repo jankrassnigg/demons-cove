@@ -1,0 +1,35 @@
+body {
+  font-family: LatoLatin;
+  width: 100%;
+  height: 100%;
+  background-color: #080101;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.title {
+  display: block;
+  font-size: 72dp;
+  font-weight: bold;
+  color: #e02818;
+  font-effect: glow(4dp #600000);
+}
+
+@keyframes pulse {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
+
+.loading {
+  display: block;
+  margin-top: 16dp;
+  font-size: 20dp;
+  color: #a08080;
+  animation: 0.8s cubic-in-out infinite alternate pulse;
+}

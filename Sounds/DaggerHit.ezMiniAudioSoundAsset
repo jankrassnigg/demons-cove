@@ -1,0 +1,128 @@
+HeaderV2
+{
+o
+{
+	Uuid %id{u4{12483536998518104223,5421586828874472149}}
+	s %t{"ezAssetDocumentInfo"}
+	u3 %v{2}
+	s %n{"Header"}
+	p
+	{
+		s %AssetType{"MiniAudioSound"}
+		VarArray %Dependencies
+		{
+			s{"Sounds/Source/138480__justinvoke__bullet-blood-3.wav"}
+			s{"Sounds/Source/270478__littlerobotsoundfactory__stab_knife_02.wav"}
+			s{"Sounds/Source/471341__mateo_herrera__22-punalada.wav"}
+		}
+		Uuid %DocumentID{u4{12483536998518104223,5421586828874472149}}
+		u4 %Hash{12539644646143431880}
+		VarArray %MetaInfo{}
+		VarArray %Outputs{}
+		VarArray %PackageDeps{}
+		VarArray %References
+		{
+			s{"Sounds/Source/138480__justinvoke__bullet-blood-3.wav"}
+			s{"Sounds/Source/270478__littlerobotsoundfactory__stab_knife_02.wav"}
+			s{"Sounds/Source/471341__mateo_herrera__22-punalada.wav"}
+		}
+		s %Tags{""}
+	}
+}
+}
+Objects
+{
+o
+{
+	Uuid %id{u4{2414994548235763337,5330420121306797842}}
+	s %t{"ezMiniAudioSoundAssetProperties"}
+	u3 %v{1}
+	p
+	{
+		f %DopplerFactor{0}
+		VarArray %Files
+		{
+			s{"Sounds/Source/138480__justinvoke__bullet-blood-3.wav"}
+			s{"Sounds/Source/471341__mateo_herrera__22-punalada.wav"}
+			s{"Sounds/Source/270478__littlerobotsoundfactory__stab_knife_02.wav"}
+		}
+		s %Group{""}
+		b %IsPositional{1}
+		b %Loop{0}
+		f %MaxRandomPitch{0x3333933F}
+		f %MaxRandomVolume{0x9A99193F}
+		f %MinRandomPitch{0x6666663F}
+		f %MinRandomVolume{0x9A99193F}
+		f %Rolloff{0x0000003F}
+		f %SoundSize{0x00008040}
+	}
+}
+o
+{
+	Uuid %id{u4{18096612296587978288,6449934965513159559}}
+	s %t{"ezDocumentRoot"}
+	u3 %v{1}
+	s %n{"ObjectTree"}
+	p
+	{
+		VarArray %Children
+		{
+			Uuid{u4{2414994548235763337,5330420121306797842}}
+		}
+	}
+}
+}
+Types
+{
+o
+{
+	Uuid %id{u4{6089094783765586323,8705960867921430659}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezReflectedClass"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezDocumentRoot"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{13165658205004362924,16796352703697934182}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezReflectedClass"}
+		s %PluginName{"ezEditorPluginMiniAudio"}
+		VarArray %Properties{}
+		s %TypeName{"ezMiniAudioSoundAssetProperties"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{983387834180907111,17935407260904399048}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezReflectedClass"}
+		u3 %TypeVersion{1}
+	}
+}
+}

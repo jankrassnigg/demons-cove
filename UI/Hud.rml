@@ -1,0 +1,44 @@
+<rml>
+  <head>
+    <title>DemonCove HUD</title>
+    <link type="text/rcss" href="UI/Hud.rcss"/>
+  </head>
+  <!-- The 'hud' data model is a blackboard that DcArenaComponent fills every frame. -->
+  <body data-model="hud">
+    <div id="timer" data-class-dead="dead" data-if="!waiting">{{time}}</div>
+    <div id="start-hint" data-if="waiting">pick up the dagger</div>
+
+    <div id="info">
+      <div class="gems" data-class-pulse="gempulse"><span class="gem-icon"></span>{{gems}}</div>
+      <div class="hand">HAND {{hand}}</div>
+      <div class="stage">STAGE {{stage}}</div>
+      <div class="godmode" data-if="godmode">GOD MODE</div>
+    </div>
+
+    <div id="crosshair" data-if="!dead"></div>
+
+    <div id="levelup" data-if="levelup">HAND {{hand}}</div>
+
+    <div id="death" data-if="dead && !menuopen">
+      <div class="panel">
+        <h1>YOU DIED</h1>
+        <div class="reason">{{reason}}</div>
+        <div class="time">{{time}}</div>
+        <div class="place best" data-if="place == 1">NEW BEST</div>
+        <div class="place" data-if="place > 1">#{{place}} on the scoreboard</div>
+        <div class="place none" data-if="place == 0"></div>
+        <div class="stats">
+          <div><span class="value">{{kills}}</span><span class="label">kills</span></div>
+          <div><span class="value">{{gems}}</span><span class="label">gems</span></div>
+          <div><span class="value">{{accuracy}}%</span><span class="label">accuracy</span></div>
+        </div>
+        <div class="scores" data-if="hasscores">
+          <div class="score" data-for="score : scores" data-class-current="score.current">
+            <span class="rank">{{score.rank}}.</span><span class="stime">{{score.time}}</span><span class="skills">{{score.kills}} kills</span>
+          </div>
+        </div>
+        <div class="hint">press R or (Y) to restart</div>
+      </div>
+    </div>
+  </body>
+</rml>

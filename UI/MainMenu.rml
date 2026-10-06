@@ -1,0 +1,21 @@
+<rml>
+  <head>
+    <title>DemonCove Menu</title>
+    <link type="text/template" href="rmlui-default/template.rml"/>
+    <link type="text/rcss" href="UI/MainMenu.rcss"/>
+  </head>
+  <!-- The button events are handled by ezRmlUiMainMenuComponent. -->
+  <body class="main-menu">
+    <div class="content">
+      <div class="title">DEMON'S COVE</div>
+      <div class="subtitle">paused</div>
+
+      <button onclick="MainMenu-Resume">Resume</button>
+      <button onclick="MainMenu-Settings">Settings</button>
+      <button onclick="MainMenu-Exit" id="button-exit">Exit</button>
+    </div>
+
+    <!-- Filled in by ezRmlUiMainMenuComponent::UpdateStats() -->
+    <div class="stats" id="menu-stats"></div>
+  </body>
+</rml>
