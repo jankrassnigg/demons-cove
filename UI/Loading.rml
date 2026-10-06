@@ -1,0 +1,13 @@
+<rml>
+  <head>
+    <title>DemonCove Loading</title>
+    <link type="text/rcss" href="UI/Loading.rcss"/>
+  </head>
+  <!-- Shown by DemonCoveGameState::CreateLoadingScreenWorld() while the arena loads. -->
+  <body>
+    <div class="content">
+      <div class="title">DEMON'S COVE</div>
+      <div class="loading">loading</div>
+    </div>
+  </body>
+</rml>

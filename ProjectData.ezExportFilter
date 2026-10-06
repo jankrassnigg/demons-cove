@@ -1,0 +1,13 @@
+#include <CommonData.ezExportFilter>
+
+
+[EXCLUDE]
+
+// documentation for developers
+*README.md
+
+
+[INCLUDE]
+
+
+

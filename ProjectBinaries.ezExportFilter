@@ -1,0 +1,13 @@
+#include <CommonBinaries.ezExportFilter>
+
+
+[EXCLUDE]
+
+// written by the assert handler when running tests, not part of the game
+*ezDefaultAssertHandlerOutput.txt
+
+
+[INCLUDE]
+
+
+

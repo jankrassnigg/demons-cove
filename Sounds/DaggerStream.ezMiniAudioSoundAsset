@@ -1,0 +1,125 @@
+HeaderV2
+{
+o
+{
+	Uuid %id{u4{6221843932805430950,5416295282432448194}}
+	s %t{"ezAssetDocumentInfo"}
+	u3 %v{2}
+	s %n{"Header"}
+	p
+	{
+		s %AssetType{"MiniAudioSound"}
+		VarArray %Dependencies
+		{
+			s{"Sounds/Source/194081__potentjello__woosh-noise-1.wav"}
+			s{"Sounds/Source/842511__gulfstreamav__woosh_2.wav"}
+		}
+		Uuid %DocumentID{u4{6221843932805430950,5416295282432448194}}
+		u4 %Hash{14716512496311046862}
+		VarArray %MetaInfo{}
+		VarArray %Outputs{}
+		VarArray %PackageDeps{}
+		VarArray %References
+		{
+			s{"Sounds/Source/194081__potentjello__woosh-noise-1.wav"}
+			s{"Sounds/Source/842511__gulfstreamav__woosh_2.wav"}
+		}
+		s %Tags{""}
+	}
+}
+}
+Objects
+{
+o
+{
+	Uuid %id{u4{6046271385422971309,5421922760277520870}}
+	s %t{"ezMiniAudioSoundAssetProperties"}
+	u3 %v{1}
+	p
+	{
+		f %DopplerFactor{0}
+		VarArray %Files
+		{
+			s{"Sounds/Source/194081__potentjello__woosh-noise-1.wav"}
+			s{"Sounds/Source/842511__gulfstreamav__woosh_2.wav"}
+		}
+		s %Group{""}
+		b %IsPositional{0}
+		b %Loop{0}
+		f %MaxRandomPitch{0xCDCCCC3F}
+		f %MaxRandomVolume{0x3333B33E}
+		f %MinRandomPitch{0x6666A63F}
+		f %MinRandomVolume{0x3333B33E}
+		f %Rolloff{0x0000803F}
+		f %SoundSize{0x0000803F}
+	}
+}
+o
+{
+	Uuid %id{u4{18096612296587978288,6449934965513159559}}
+	s %t{"ezDocumentRoot"}
+	u3 %v{1}
+	s %n{"ObjectTree"}
+	p
+	{
+		VarArray %Children
+		{
+			Uuid{u4{6046271385422971309,5421922760277520870}}
+		}
+	}
+}
+}
+Types
+{
+o
+{
+	Uuid %id{u4{6089094783765586323,8705960867921430659}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezReflectedClass"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezDocumentRoot"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{13165658205004362924,16796352703697934182}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezReflectedClass"}
+		s %PluginName{"ezEditorPluginMiniAudio"}
+		VarArray %Properties{}
+		s %TypeName{"ezMiniAudioSoundAssetProperties"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{983387834180907111,17935407260904399048}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezReflectedClass"}
+		u3 %TypeVersion{1}
+	}
+}
+}

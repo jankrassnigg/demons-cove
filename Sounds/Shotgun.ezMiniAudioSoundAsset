@@ -1,0 +1,122 @@
+HeaderV2
+{
+o
+{
+	Uuid %id{u4{5182298709420203927,4868482928656282640}}
+	s %t{"ezAssetDocumentInfo"}
+	u3 %v{2}
+	s %n{"Header"}
+	p
+	{
+		s %AssetType{"MiniAudioSound"}
+		VarArray %Dependencies
+		{
+			s{"Sounds/Source/267887__wjl__short-fireball-woosh.wav"}
+		}
+		Uuid %DocumentID{u4{5182298709420203927,4868482928656282640}}
+		u4 %Hash{8142652952828605153}
+		VarArray %MetaInfo{}
+		VarArray %Outputs{}
+		VarArray %PackageDeps{}
+		VarArray %References
+		{
+			s{"Sounds/Source/267887__wjl__short-fireball-woosh.wav"}
+		}
+		s %Tags{""}
+	}
+}
+}
+Objects
+{
+o
+{
+	Uuid %id{u4{2254060680727988354,5054538006866971286}}
+	s %t{"ezMiniAudioSoundAssetProperties"}
+	u3 %v{1}
+	p
+	{
+		f %DopplerFactor{0}
+		VarArray %Files
+		{
+			s{"Sounds/Source/267887__wjl__short-fireball-woosh.wav"}
+		}
+		s %Group{""}
+		b %IsPositional{0}
+		b %Loop{0}
+		f %MaxRandomPitch{0xCDCC8C3F}
+		f %MaxRandomVolume{0x9A99193F}
+		f %MinRandomPitch{0x3333733F}
+		f %MinRandomVolume{0x9A99193F}
+		f %Rolloff{0x0000803F}
+		f %SoundSize{0x0000803F}
+	}
+}
+o
+{
+	Uuid %id{u4{18096612296587978288,6449934965513159559}}
+	s %t{"ezDocumentRoot"}
+	u3 %v{1}
+	s %n{"ObjectTree"}
+	p
+	{
+		VarArray %Children
+		{
+			Uuid{u4{2254060680727988354,5054538006866971286}}
+		}
+	}
+}
+}
+Types
+{
+o
+{
+	Uuid %id{u4{6089094783765586323,8705960867921430659}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezReflectedClass"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezDocumentRoot"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{13165658205004362924,16796352703697934182}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezReflectedClass"}
+		s %PluginName{"ezEditorPluginMiniAudio"}
+		VarArray %Properties{}
+		s %TypeName{"ezMiniAudioSoundAssetProperties"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{983387834180907111,17935407260904399048}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezReflectedClass"}
+		u3 %TypeVersion{1}
+	}
+}
+}

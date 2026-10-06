@@ -1,0 +1,125 @@
+HeaderV2
+{
+o
+{
+	Uuid %id{u4{7156068450950386058,4762761824856371102}}
+	s %t{"ezAssetDocumentInfo"}
+	u3 %v{2}
+	s %n{"Header"}
+	p
+	{
+		s %AssetType{"MiniAudioSound"}
+		VarArray %Dependencies
+		{
+			s{"Sounds/Source/555412__tonsil5__zombie-death-1.wav"}
+			s{"Sounds/Source/751340__qubodup__slime-death.wav"}
+		}
+		Uuid %DocumentID{u4{7156068450950386058,4762761824856371102}}
+		u4 %Hash{4524852359530039602}
+		VarArray %MetaInfo{}
+		VarArray %Outputs{}
+		VarArray %PackageDeps{}
+		VarArray %References
+		{
+			s{"Sounds/Source/555412__tonsil5__zombie-death-1.wav"}
+			s{"Sounds/Source/751340__qubodup__slime-death.wav"}
+		}
+		s %Tags{""}
+	}
+}
+}
+Objects
+{
+o
+{
+	Uuid %id{u4{229604573325420435,5081228708263832808}}
+	s %t{"ezMiniAudioSoundAssetProperties"}
+	u3 %v{1}
+	p
+	{
+		f %DopplerFactor{0}
+		VarArray %Files
+		{
+			s{"Sounds/Source/751340__qubodup__slime-death.wav"}
+			s{"Sounds/Source/555412__tonsil5__zombie-death-1.wav"}
+		}
+		s %Group{""}
+		b %IsPositional{1}
+		b %Loop{0}
+		f %MaxRandomPitch{0x3333B33F}
+		f %MaxRandomVolume{0x0000003F}
+		f %MinRandomPitch{0xCDCC8C3F}
+		f %MinRandomVolume{0x0000003F}
+		f %Rolloff{0x0000003F}
+		f %SoundSize{0x00008040}
+	}
+}
+o
+{
+	Uuid %id{u4{18096612296587978288,6449934965513159559}}
+	s %t{"ezDocumentRoot"}
+	u3 %v{1}
+	s %n{"ObjectTree"}
+	p
+	{
+		VarArray %Children
+		{
+			Uuid{u4{229604573325420435,5081228708263832808}}
+		}
+	}
+}
+}
+Types
+{
+o
+{
+	Uuid %id{u4{6089094783765586323,8705960867921430659}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezReflectedClass"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezDocumentRoot"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{13165658205004362924,16796352703697934182}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezReflectedClass"}
+		s %PluginName{"ezEditorPluginMiniAudio"}
+		VarArray %Properties{}
+		s %TypeName{"ezMiniAudioSoundAssetProperties"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{983387834180907111,17935407260904399048}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{""}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezReflectedClass"}
+		u3 %TypeVersion{1}
+	}
+}
+}

@@ -1,0 +1,239 @@
+/* Without the default template nothing is a block element by default. */
+div, h1 {
+  display: block;
+}
+
+body {
+  font-family: LatoLatin;
+  color: #e8d8d0;
+  width: 100%;
+  height: 100%;
+}
+
+#timer {
+  position: absolute;
+  top: 16dp;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 40dp;
+  font-weight: bold;
+  color: #ffffff;
+  font-effect: shadow(2dp 2dp #000000);
+}
+
+@keyframes hint-pulse {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+#start-hint {
+  position: absolute;
+  top: 62%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 26dp;
+  color: #ffb070;
+  font-effect: shadow(2dp 2dp #000000);
+  animation: 1s cubic-in-out infinite alternate hint-pulse;
+}
+
+#timer.dead {
+  color: #ff3020;
+}
+
+#info {
+  position: absolute;
+  top: 18dp;
+  left: 22dp;
+  font-size: 18dp;
+  font-effect: shadow(1dp 1dp #000000);
+}
+
+#info div {
+  margin-bottom: 4dp;
+}
+
+#info .gems {
+  font-size: 26dp;
+  font-weight: bold;
+  color: #ff5070;
+}
+
+#info .gems.pulse {
+  color: #ffc0d0;
+  transform: scale(1.25);
+}
+
+@keyframes levelup-in {
+  from { opacity: 0; transform: scale(2); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#levelup {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 48dp;
+  font-weight: bold;
+  color: #ffb070;
+  font-effect: glow(3dp #803000);
+  animation: 0.3s cubic-out 1 levelup-in;
+}
+
+.gem-icon {
+  display: inline-block;
+  width: 12dp;
+  height: 12dp;
+  margin-right: 8dp;
+  background-color: #ff3060;
+  transform: rotate(45deg);
+}
+
+#info .hand {
+  color: #ffb070;
+}
+
+#info .stage {
+  color: #a09090;
+}
+
+#info .godmode {
+  color: #ffd040;
+}
+
+/* A small dot, Devil Daggers doesn't have much of a crosshair either. */
+#crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4dp;
+  height: 4dp;
+  margin-left: -2dp;
+  margin-top: -2dp;
+  background-color: rgba(255, 255, 255, 200);
+}
+
+#death {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 0, 0, 140);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#death .panel {
+  width: 420dp;
+  padding: 24dp;
+  text-align: center;
+  background-color: rgba(10, 2, 2, 210);
+  border: 2dp #802018;
+}
+
+#death h1 {
+  display: block;
+  font-size: 44dp;
+  font-weight: bold;
+  color: #ff3020;
+  margin-bottom: 4dp;
+}
+
+#death .reason {
+  font-size: 18dp;
+  color: #c0a0a0;
+  margin-bottom: 18dp;
+}
+
+#death .time {
+  font-size: 54dp;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#death .place {
+  font-size: 20dp;
+  font-weight: bold;
+  color: #ffb070;
+  height: 26dp;
+  margin-bottom: 10dp;
+}
+
+#death .place.best {
+  color: #ffd040;
+}
+
+#death .scores {
+  font-size: 16dp;
+  margin-bottom: 18dp;
+  padding: 8dp 0;
+  border-top: 1dp #502018;
+  border-bottom: 1dp #502018;
+}
+
+#death .score {
+  color: #a09090;
+  height: 22dp;
+  line-height: 22dp;
+}
+
+/* the round that was just played */
+#death .score.current {
+  color: #ffd040;
+  font-weight: bold;
+  background-color: rgba(120, 40, 10, 140);
+}
+
+#death .score span {
+  display: inline-block;
+}
+
+#death .score .rank {
+  width: 40dp;
+  text-align: right;
+  margin-right: 12dp;
+}
+
+#death .score .stime {
+  width: 100dp;
+  text-align: right;
+  margin-right: 24dp;
+}
+
+#death .score .skills {
+  width: 110dp;
+  text-align: left;
+}
+
+#death .stats {
+  font-size: 20dp;
+  margin-bottom: 20dp;
+}
+
+/* Values right aligned and labels left aligned, both columns meet in the middle of the panel. */
+#death .stats .value {
+  display: inline-block;
+  width: 180dp;
+  text-align: right;
+  margin-right: 12dp;
+  color: #ffffff;
+}
+
+#death .stats .label {
+  display: inline-block;
+  width: 180dp;
+  text-align: left;
+  color: #a09090;
+}
+
+#death .hint {
+  font-size: 16dp;
+  color: #808080;
+}
