@@ -193,3 +193,19 @@ InputAction
 		float %Scale{2.5}
 	}
 }
+InputAction
+{
+	string %Set{"Default"}
+	string %Action{"restart"}
+	bool %TimeScale{false}
+	Slot
+	{
+		string %Key{"keyboard_r"}
+		float %Scale{1}
+	}
+	Slot
+	{
+		string %Key{"controller0_button_y"}
+		float %Scale{1}
+	}
+}

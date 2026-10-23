@@ -3,7 +3,7 @@
     <title>DemonCove HUD</title>
     <link type="text/rcss" href="UI/Hud.rcss"/>
   </head>
-  <!-- The 'hud' data model is a blackboard that DcArenaComponent fills every frame. -->
+  <!-- The 'hud' data model is a blackboard that DcHudComponent (in the player prefab) fills every frame. -->
   <body data-model="hud">
     <div id="timer" data-class-dead="dead" data-if="!waiting">{{time}}</div>
     <div id="start-hint" data-if="waiting">pick up the dagger</div>

@@ -64,13 +64,6 @@ void DemonCoveGame::DetermineProjectPath()
   m_sAppProjectPath = "Data/Samples/DemonCove";
 }
 
-ezUniquePtr<ezGameStateBase> DemonCoveGame::CreateGameState()
-{
-  // usually we should only have a single non-fallback gamestate which is automatically picked
-  // but if necessary, we can override this here
-  return SUPER::CreateGameState();
-}
-
 ezResult DemonCoveGame::BeforeCoreSystemsStartup()
 {
   ezStartup::AddApplicationTag("game");
@@ -88,9 +81,7 @@ void DemonCoveGame::AfterCoreSystemsStartup()
 
   ezStartup::StartupHighLevelSystems();
 
-  // we need a game state to do anything
-  // if no custom game state is available, ezFallbackGameState will be used
-  // the game state is also responsible for either creating a world, or loading it
-  // the ezFallbackGameState inspects the command line to figure out which scene to load
+  // The game state is responsible for loading the scene and spawning the player. The application picks the
+  // DemonCoveGameState from the game plugin automatically, see ezGameApplicationBase::CreateGameState().
   ActivateGameState(nullptr, {}, ezTransform::MakeIdentity());
 }

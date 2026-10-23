@@ -21,14 +21,20 @@ o
 		s %AssetType{"Prefab"}
 		VarArray %Dependencies{}
 		Uuid %DocumentID{u4{9175973372183493021,5340620545267779223}}
-		u4 %Hash{1523894438350902106}
+		u4 %Hash{16373371503283368216}
 		VarArray %MetaInfo
 		{
 			Uuid{u4{9700419093715909837,3096340160387684532}}
 		}
 		VarArray %Outputs{}
-		VarArray %PackageDeps{}
-		VarArray %References{}
+		VarArray %PackageDeps
+		{
+			s{"{ 630d2737-1280-4a07-b214-200d27d32885 }"}
+		}
+		VarArray %References
+		{
+			s{"{ 630d2737-1280-4a07-b214-200d27d32885 }"}
+		}
 		s %Tags{""}
 	}
 }
@@ -110,19 +116,6 @@ o
 		{
 			s{"CastShadow"}
 		}
-	}
-}
-o
-{
-	Uuid %id{u4{14353409194462628869,706099094725846503}}
-	s %t{"ezInputComponent"}
-	u3 %v{3}
-	p
-	{
-		b %Active{1}
-		b %ForwardToBlackboard{0}
-		s %Granularity{"ezInputMessageGranularity::PressAndRelease"}
-		s %InputSet{"Default"}
 	}
 }
 o
@@ -276,6 +269,30 @@ o
 }
 o
 {
+	Uuid %id{u4{16697462539190113613,9192410722463016435}}
+	s %t{"ezGameObject"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		VarArray %Children{}
+		VarArray %Components
+		{
+			Uuid{u4{18106108545036940327,18344727324650951336}}
+			Uuid{u4{17978398847952301094,17271042463770280935}}
+		}
+		s %GlobalKey{""}
+		Vec3 %LocalPosition{f{0,0,0}}
+		Quat %LocalRotation{f{0,0,0,0x0000803F}}
+		Vec3 %LocalScaling{f{0x0000803F,0x0000803F,0x0000803F}}
+		f %LocalUniformScaling{0x0000803F}
+		s %Mode{"ezObjectMode::Automatic"}
+		s %Name{"Hud"}
+		VarArray %Tags{}
+	}
+}
+o
+{
 	Uuid %id{u4{10740580713467244903,14298597953141718709}}
 	s %t{"ezGameObject"}
 	u3 %v{1}
@@ -286,11 +303,11 @@ o
 		{
 			Uuid{u4{13399044648808160021,374566110325327661}}
 			Uuid{u4{9502551408637432251,5199082819094471712}}
+			Uuid{u4{16697462539190113613,9192410722463016435}}
 		}
 		VarArray %Components
 		{
 			Uuid{u4{15275416590887580715,871967410708098657}}
-			Uuid{u4{14353409194462628869,706099094725846503}}
 			Uuid{u4{17838120528825404041,4858826460881607677}}
 		}
 		s %GlobalKey{"Player"}
@@ -304,6 +321,18 @@ o
 		{
 			s{"CastShadow"}
 		}
+	}
+}
+o
+{
+	Uuid %id{u4{17978398847952301094,17271042463770280935}}
+	s %t{"DcHudComponent"}
+	u3 %v{1}
+	p
+	{
+		b %Active{1}
+		b %ShowDebugInfo{0}
+		s %Template{""}
 	}
 }
 o
@@ -333,6 +362,25 @@ o
 		{
 			s{"CastShadow"}
 		}
+	}
+}
+o
+{
+	Uuid %id{u4{18106108545036940327,18344727324650951336}}
+	s %t{"ezRmlUiCanvas2DComponent"}
+	u3 %v{5}
+	p
+	{
+		b %Active{1}
+		Vec2 %AnchorPoint{f{0,0}}
+		b %AutobindBlackboards{1}
+		f %CustomScale{0x0000803F}
+		Vec2i %Offset{i3{0,0}}
+		b %OnDemandUpdate{1}
+		b %PassInput{0}
+		s %RmlFile{"{ 630d2737-1280-4a07-b214-200d27d32885 }"}
+		b %SendEventMessage{0}
+		Vec2u %Size{u3{0,0}}
 	}
 }
 }
@@ -456,23 +504,6 @@ o
 }
 o
 {
-	Uuid %id{u4{6647125758421374114,3076962269307353962}}
-	s %t{"ezReflectedTypeDescriptor"}
-	u3 %v{1}
-	p
-	{
-		VarArray %Attributes{}
-		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
-		VarArray %Functions{}
-		s %ParentTypeName{"ezComponent"}
-		s %PluginName{"Static"}
-		VarArray %Properties{}
-		s %TypeName{"ezInputComponent"}
-		u3 %TypeVersion{3}
-	}
-}
-o
-{
 	Uuid %id{u4{11638255232360359673,3108610646416571142}}
 	s %t{"ezReflectedTypeDescriptor"}
 	u3 %v{1}
@@ -520,6 +551,23 @@ o
 		VarArray %Properties{}
 		s %TypeName{"ezCameraMode"}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{5944471609892995972,3373323694501583966}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezRmlUiCanvasComponentBase"}
+		s %PluginName{"ezEditorPluginRmlUi"}
+		VarArray %Properties{}
+		s %TypeName{"ezRmlUiCanvas2DComponent"}
+		u3 %TypeVersion{5}
 	}
 }
 o
@@ -628,23 +676,6 @@ o
 }
 o
 {
-	Uuid %id{u4{12538082841484211102,5574057413044211266}}
-	s %t{"ezReflectedTypeDescriptor"}
-	u3 %v{1}
-	p
-	{
-		VarArray %Attributes{}
-		s %Flags{"ezTypeFlags::IsEnum|ezTypeFlags::Minimal"}
-		VarArray %Functions{}
-		s %ParentTypeName{"ezEnumBase"}
-		s %PluginName{"Static"}
-		VarArray %Properties{}
-		s %TypeName{"ezInputMessageGranularity"}
-		u3 %TypeVersion{1}
-	}
-}
-o
-{
 	Uuid %id{u4{16489192741694970206,5989094129538910224}}
 	s %t{"ezReflectedPropertyDescriptor"}
 	u3 %v{2}
@@ -660,6 +691,23 @@ o
 		s %Flags{"ezPropertyFlags::StandardType"}
 		s %Name{"MouseSensitivity"}
 		s %Type{"float"}
+	}
+}
+o
+{
+	Uuid %id{u4{10915434802948687564,6393886782732208983}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Abstract|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezComponent"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezBlackboardComponent"}
+		u3 %TypeVersion{3}
 	}
 }
 o
@@ -759,6 +807,23 @@ o
 		s %Name{"SetVerticalRotation"}
 		Uuid %ReturnValue{u4{17048005995112613167,12709093908070255887}}
 		s %Type{"ezFunctionType::Member"}
+	}
+}
+o
+{
+	Uuid %id{u4{12154821427648791411,8421033311880761472}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Abstract|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezRenderComponent"}
+		s %PluginName{"ezEditorPluginRmlUi"}
+		VarArray %Properties{}
+		s %TypeName{"ezRmlUiCanvasComponentBase"}
+		u3 %TypeVersion{2}
 	}
 }
 o
@@ -918,6 +983,23 @@ o
 }
 o
 {
+	Uuid %id{u4{16777871838542487558,12116962178824346014}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes{}
+		s %Flags{"ezTypeFlags::Class|ezTypeFlags::Abstract|ezTypeFlags::Minimal"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezComponent"}
+		s %PluginName{"Static"}
+		VarArray %Properties{}
+		s %TypeName{"ezRenderComponent"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
 	Uuid %id{u4{1041958858862868594,12240733053272051679}}
 	s %t{"ezDefaultValueAttribute"}
 	u3 %v{1}
@@ -993,7 +1075,7 @@ o
 		s %Flags{"ezTypeFlags::Class"}
 		VarArray %Functions{}
 		s %ParentTypeName{"ezComponent"}
-		s %PluginName{"ezMiniAudioPlugin"}
+		s %PluginName{"DemonCovePlugin"}
 		VarArray %Properties{}
 		s %TypeName{"ezMiniAudioListenerComponent"}
 		u3 %TypeVersion{1}
@@ -1065,6 +1147,26 @@ o
 		s %PluginName{"ezEditorPluginJolt"}
 		VarArray %Properties{}
 		s %TypeName{"ezJoltDefaultCharacterComponent"}
+		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{7490388594849536859,16189639820658671460}}
+	s %t{"ezReflectedTypeDescriptor"}
+	u3 %v{1}
+	p
+	{
+		VarArray %Attributes
+		{
+			Uuid{u4{7220181641995396654,17833792425345223434}}
+		}
+		s %Flags{"ezTypeFlags::Class"}
+		VarArray %Functions{}
+		s %ParentTypeName{"ezBlackboardComponent"}
+		s %PluginName{"DemonCovePlugin"}
+		VarArray %Properties{}
+		s %TypeName{"DcHudComponent"}
 		u3 %TypeVersion{1}
 	}
 }
@@ -1179,6 +1281,16 @@ o
 		}
 		s %TypeName{"DcPlayerComponent"}
 		u3 %TypeVersion{1}
+	}
+}
+o
+{
+	Uuid %id{u4{7220181641995396654,17833792425345223434}}
+	s %t{"ezCategoryAttribute"}
+	u3 %v{1}
+	p
+	{
+		s %Category{"DemonCove"}
 	}
 }
 o

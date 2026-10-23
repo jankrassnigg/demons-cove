@@ -74,11 +74,20 @@ All of these can be set on the command line, for example `-DemonCove.GodMode 1 -
 
 The game logic is in the C++ plugin in `CppSource/DemonCovePlugin`:
 
-- `DcArenaComponent` runs a round: spawn timeline, enemies, daggers, gems, the tile floor, death and restart. Enemies, daggers and gems are plain data, their game objects (prefab instances) are only visuals. Collision checks are sphere tests.
-- `DcPlayerComponent` handles input, movement through the Jolt character controller, and firing.
-- `DemonCoveGameState` opens the RmlUi main menu on ESC.
+| Folder | Contents |
+| --- | --- |
+| `Arena` | `DcArenaComponent` runs the game rules: spawn timeline, enemies, daggers, gems, player death and restart. Enemies, daggers and gems are plain data, their game objects (prefab instances) are only visuals. Collision checks are sphere tests. The implementation is split into `DcArenaComponent.cpp` (round flow), `DcArenaEnemies.cpp` and `DcArenaDaggersAndGems.cpp`. `DcEnemyType` is a table with the stats of each enemy type. `DcArenaFloorComponent` builds the tile floor that crumbles during the endless phase. `DcScoreboard` loads and saves the best rounds. |
+| `Audio` | `DcAudioComponent` holds all sound and music assets. Gameplay code only says what happened (`DcSound::GemPickup`), so all audio can be configured in one place. |
+| `Player` | `DcPlayerComponent` handles input, movement through the Jolt character controller, and firing. |
+| `UI` | `DcHudComponent` fills the blackboard that the HUD document is bound to. |
+| `GameState` | `DemonCoveGameState` picks the startup scene, shows the loading screen and opens the RmlUi main menu on ESC. |
+| `Common` | Console variables and small helpers. |
 
-The HUD (`UI/Hud.rml`) is an RmlUi document bound to a blackboard named `hud`, which the arena fills every frame.
+In the scene, the `Arena` object holds the arena, floor and audio components. The grey box next to them only shows the arena's shape in the editor and is hidden when the game runs.
+
+The player prefab (`Prefabs/Player/Player.ezPrefab`) is spawned by the game state at the player start. It also contains the HUD: an RmlUi canvas showing `UI/Hud.rml`, with a `DcHudComponent` that provides the `hud` blackboard the document binds to. That way the HUD only shows up when the game is played, not while editing the level. The main menu is part of the scene.
+
+Input actions are configured in `RuntimeConfigs/InputConfig.ddl` (*Project > Input Configuration* in the editor).
 
 ## Credits
 
